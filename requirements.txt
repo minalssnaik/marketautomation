@@ -1,0 +1,7 @@
+streamlit
+requests
+python-dotenv
+pymongo
+motor
+fastapi
+uvicorn
