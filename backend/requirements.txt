@@ -1,4 +1,8 @@
 streamlit
+openai
+pandas
+numpy
+requests
 aiohappyeyeballs
 aiohttp
 aiosignal
