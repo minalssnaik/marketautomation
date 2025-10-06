@@ -24,3 +24,4 @@ if st.button("Generate"):
         st.write(response.choices[0].message["content"])
     else:
         st.warning("Please enter a prompt.")
+OPENAI_API_KEY = "sk-proj-abc123def456ghi789"
