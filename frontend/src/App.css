@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #fef7f0 0%, #fff5eb 100%);
+  min-height: 100vh;
+  color: #1a1a1a;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f76e48;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e55a36;
+}
+
+/* Button animations */
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(247, 110, 72, 0.1);
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #f76e48, #ff8a65);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom focus styles */
+*:focus {
+  outline: 2px solid #f76e48;
+  outline-offset: 2px;
+}
+
+/* Progress bar animation */
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.progress-animate {
+  animation: progress 0.8s ease-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Brand color utilities */
+.brand-primary {
+  color: #f76e48;
+}
+
+.brand-bg {
+  background-color: #f76e48;
+}
+
+.brand-border {
+  border-color: #f76e48;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(247, 110, 72, 0.2);
+  color: #1a1a1a;
+}
+
+/* Custom input styling */
+input:focus, textarea:focus, select:focus {
+  border-color: #f76e48;
+  box-shadow: 0 0 0 2px rgba(247, 110, 72, 0.1);
+}
+
+/* Dashboard grid */
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Feature card styles */
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(247, 110, 72, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 40px rgba(247, 110, 72, 0.15);
+  border-color: rgba(247, 110, 72, 0.3);
+}
+
+/* Status indicators */
+.status-ready {
+  color: #10b981;
+}
+
+.status-loading {
+  color: #f59e0b;
+}
+
+.status-error {
+  color: #ef4444;
+}
+
+/* Positioning map styles */
+.positioning-map {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.positioning-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #f76e48;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px rgba(247, 110, 72, 0.3);
+}
+
+.positioning-label {
+  position: absolute;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Data table styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.data-table tbody tr:hover {
+  background-color: #fef7f0;
+}
